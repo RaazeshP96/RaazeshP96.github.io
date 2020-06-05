@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+</head>
+<body>
+	<div id="hide" >Loading...</div>
+	<div id="mainContent" hidden>
+		<center>
+			<img id="profile" height="100" width="100">
+			<h1 id="username"></h1>
+			<h3 id="bio"></h3>
+			<h3 id="follow"></h3>
+			<p>
+				Click me on <a id="gitHub">github</a>
+			</p>
+			<a class="twitter-timeline" data-width="299" data-height="400" href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw">Tweets by raazesh_p</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+	<script>
+		fetch('https://api.github.com/users/RaazeshP96')
+		  .then(response => response.json())
+		  .then(data => {
+		  	console.log(data)
+		  document.getElementById('profile').src=data['avatar_url']
+		  document.getElementById('username').textContent=data['name']
+		  let follower=data['followers']
+		  let message=follower + " nice people are following me in github."
+		  document.getElementById('bio').textContent=data['bio']
+		  document.getElementById('gitHub').href=data['html_url']
+		  document.getElementById('follow').textContent=message
+		  document.getElementById('mainContent').hidden=false
+		  document.getElementById('hide').hidden=true
+		} );
+	</script>
+</body>
+</html>
