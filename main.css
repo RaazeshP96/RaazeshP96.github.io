@@ -1,24 +1,17 @@
-
+/*Extra small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 575.98px){ 
 	.display-4 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.2;
+	    font-size: 1.5rem;
+	    font-weight: 400;
+	    line-height: 1.2;
+	}
+
+	h3 {
+    	font-size: 0.75rem;
+	}
+
+	.display-5{
+		font-size: 1.05rem;
+	}
 }
 
-h3 {
-    font-size: 0.75rem;
-}
-
-
-element.style {
-}
-.display-4 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-}
-#rep{
-	font-size: 1.05rem;
-}
-}

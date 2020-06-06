@@ -12,9 +12,11 @@
 		<div id="hideme"> 
   			<strong>Loading...</strong>
 		</div>
+
+		
 		<div class="row">
-			<div class="col col-3"></div>
-			<div class="col col-6">
+			<div class="col col-1"></div>
+			<div class="col col-10">
 				<div id="mainContent"  hidden>
 						<div class="jumbotron">
 							<img id="profile" height="200" width="200" class="img-thumbnail mx-auto d-block">
@@ -24,35 +26,40 @@
 							<p class="lead text-center">
 								Click me on <a class="btn btn-dark" id="gitHub">Github</a>
 							</p>
+
+							<!-- twitter api from publish.twitter.com -->
 							<div class="blocktext" align="center" id="twitter">
 								<a class="twitter-timeline" data-width="600" data-height="500" data-theme="dark" href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw">Tweets by raazesh_p</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 							</div><hr>
+
+						
+						<!-- displaying reposotories -->
 						<div>
-							<p id="repp" class="display-4"><strong>My Reposotories:</strong></p><hr>
+							<p id="repp" class="display-5"><strong> My Reposotories: </strong></p><hr>
 							<ul id="repo"  class="list-group list-group-flush"></ul>
 						</div>
 						</div>
 				</div>
 			</div>
-			<div class="col col-l3"></div>
+			<div class="col col-1"></div>
 		</div>
 	</div>
 	<script>
+		// fetching api of RaazeshP96's github
 		fetch('https://api.github.com/users/RaazeshP96')
 		  .then(response => response.json())
 		  .then(data => {
 		  	console.log(data)
 		  document.getElementById('profile').src=data['avatar_url']
-		  document.getElementById('username').textContent=data['name']
+		  document.getElementById('username').innerHTML=`<strong> ${data['name']} </strong> `
 		  let follower=data['followers']
-		  /*let message=follower + " nice people are following me in github." */
 		  let message=`${follower} nice people are following me in github.`
 		  document.getElementById('bio').textContent=data['bio']
 		  document.getElementById('gitHub').href=data['html_url']
 		  document.getElementById('follow').textContent=message
-		  // document.getElementById('mainContent').hidden=false
-		  // document.getElementById('hide').hidden=true
 		} );
+
+		  // getting the api of Reposotories from github
 		  fetch("https://api.github.com/users/RaazeshP96/repos")
 		  .then(response => response.json())
 		  .then(data => {
@@ -63,8 +70,9 @@
 		  		ref.innerHTML +=`<li class="list-group-item"> ${element['name']} </li>`
 
 		  	} )
+
 		  	
-		  
+		  // for displaying loading before fetching datas from apis
 		  document.getElementById('mainContent').hidden=false
 		  document.getElementById('hideme').hidden=true
 		} );
