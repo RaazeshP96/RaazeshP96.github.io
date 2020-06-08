@@ -4,7 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>My Portfolio</title>
+    <title>Rajesh's Portfolio</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- bootstrap  cdn implementation -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- internal css -->
@@ -23,7 +28,9 @@
                 <div id="mainContent" hidden>
                     <!-- navbar -->
                     <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
-                        <a class="navbar-brand" href="#mainContent">Navbar</a>
+                        <a class="navbar-brand" href="#mainContent">
+                            <img src="img/favicon-32x32.png" width="32" height="32" alt="" loading="lazy">
+                        </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -56,9 +63,8 @@
                         </div>
                         <hr>
                         <!-- displaying reposotories -->
-                        <a id="myrepo"></a> <!-- just abookmark for myreposotories -->
                         <div>
-                            <p id="repp" class="display-5"><strong> My Reposotories: </strong></p>
+                            <p id="myrepo" class="display-5"><strong> My Reposotories: </strong></p>
                             <hr>
                             <ul id="repo" class="list-group list-group-flush"></ul>
                         </div>
