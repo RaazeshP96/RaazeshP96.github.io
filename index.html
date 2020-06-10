@@ -2,8 +2,11 @@
 <html>
 
 <head>
+    <!-- meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="raazeshprajapati,Portfolio,RaazeshP96">
+    <meta name="description" content="This is a simple portfolio website using github apis">
     <title>Rajesh's Portfolio</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -17,62 +20,58 @@
 </head>
 
 <body>
-    <!-- loading -->
-    <div class="container">
-        <div id="hideme">
-            <strong>Loading...</strong>
-        </div>
-        <div class="row">
-            <div class="col col-1"></div>
-            <div class="col col-10">
-                <div id="mainContent" hidden>
-                    <!-- navbar -->
-                    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
-                        <a class="navbar-brand" href="#mainContent">
-                            <img src="img/favicon-32x32.png" width="32" height="32" alt="" loading="lazy">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto ">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#mainContent">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#twitter">My Tweets</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#myrepo">My Reposotories</a>
-                                </li>
-                            </ul>
-                    </nav>
-                    <div class="jumbotron">
-                        <img id="profile" height="200" width="200" class="img-thumbnail mx-auto d-block">
-                        <h1 id="username" class="display-4 text-center"></h1>
-                        <h3 id="bio" class="lead text-center"></h3>
-                        <h3 id="follow" class="text-center"></h3>
-                        <p class="lead text-center">
-                            Click me on <a class="btn btn-dark" id="gitHub">Github</a>
-                        </p>
-                        <hr>
-                        <!-- twitter api from publish.twitter.com -->
-                        <div class="blocktext" align="center" id="twitter">
-                            <a class="twitter-timeline" data-width="600" data-height="500" data-theme="dark" href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw">Tweets by raazesh_p</a>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        </div>
-                        <hr>
-                        <!-- displaying reposotories -->
-                        <div>
-                            <p id="myrepo" class="display-5"><strong> My Reposotories: </strong></p>
-                            <hr>
-                            <ul id="repo" class="list-group list-group-flush"></ul>
-                        </div>
-                    </div>
-                </div>
+    <div id="hideme">
+        <strong>Loading...</strong>
+    </div>
+    <div class="container-fluid" id="mainContent" hidden>
+        <header>
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
+                <a class="navbar-brand" href="#mainContent">
+                    <img src="img/favicon-32x32.png" width="32" height="32" alt="raazeshprajapati_icon" title="RaazeshP96" loading="lazy">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#mainContent">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#twitter">My Tweets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#myrepo">My Reposotories</a>
+                        </li>
+                    </ul>
+            </nav>
+        </header>
+        <main class="jumbotron">
+            <img id="profile" alt="github_pic" height="200" width="200" title="github_photo" class="img-thumbnail mx-auto d-block">
+            <h1 id="username" class="display-4 text-center"></h1>
+            <h3 id="bio" class="lead text-center"></h3>
+            <h3 id="follow" class="text-center"></h3>
+            <p class="lead text-center">
+                Click me on <a class="btn btn-dark" id="gitHub">Github</a>
+            </p>
+            <hr>
+            <!-- twitter api from publish.twitter.com -->
+            <div class="blocktext" align="center" id="twitter">
+                <a class="twitter-timeline" data-width="600" data-height="500" data-theme="dark" href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw">Tweets by raazesh_p</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            <div class="col col-1"></div>
-        </div>
+            <hr>
+            <!-- displaying reposotories -->
+            <div>
+                <p id="myrepo" class="display-5"><strong> My Reposotories: </strong></p>
+                <hr>
+                <ul id="repo" class="list-group list-group-flush"></ul>
+            </div>
+        </main>
+        <footer class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://Raazeshp96.github.io/"> Raazeshp96.github.io</a>
+        </footer>
     </div>
     <script>
     // fetching api of RaazeshP96's github

@@ -14,4 +14,24 @@
 		font-size: 1.05rem;
 	}
 }
-
+.jumbotron{
+	background-color: #3F0E40;
+	color: #ffffff;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #292F33;
+    color: #FFF;
+    border: 1px solid
+}
+.container-fluid{
+	    padding-right: 0px;
+    padding-left: 0px;
+}
+footer{
+	margin-top: 1px;
+	color: #FFF;
+	background-color: #292F33;
+}
