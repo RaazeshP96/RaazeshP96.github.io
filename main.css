@@ -15,9 +15,10 @@
 	}
 }
 .jumbotron{
-	background-color: #292929;
+	background-color: #181818;
 	color: #ffffff;
 	margin-bottom: 0;
+	border-radius: 0;
 }
 .list-group-item {
     position: relative;
@@ -34,4 +35,7 @@
 footer{
 	color: #FFF;
 	background-color: #343A40;
+}
+a:hover{
+	color: #007bff;
 }
