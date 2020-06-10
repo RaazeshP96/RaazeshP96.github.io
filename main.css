@@ -15,23 +15,23 @@
 	}
 }
 .jumbotron{
-	background-color: #3F0E40;
+	background-color: #292929;
 	color: #ffffff;
+	margin-bottom: 0;
 }
 .list-group-item {
     position: relative;
     display: block;
     padding: .75rem 1.25rem;
-    background-color: #292F33;
-    color: #FFF;
+    background-color: #343A40;
+    color: #B3B5B7;
     border: 1px solid
 }
 .container-fluid{
-	    padding-right: 0px;
+	padding-right: 0px;
     padding-left: 0px;
 }
 footer{
-	margin-top: 1px;
 	color: #FFF;
-	background-color: #292F33;
+	background-color: #343A40;
 }
