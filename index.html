@@ -93,7 +93,8 @@
             console.log(data)
             let ref = document.getElementById('repo')
             data.forEach(element => {
-                ref.innerHTML += `<li class="list-group-item"> ${element['name']} </li>`
+                ref.innerHTML += `<li class="list-group-item"><a href='${element["html_url"]}' target='_blank' > ${element['name']} </a></li>`
+
 
             })
 

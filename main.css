@@ -36,6 +36,14 @@ footer{
 	color: #FFF;
 	background-color: #343A40;
 }
-a:hover{
-	color: #007bff;
+
+ul li a{
+	text-decoration: none;
+	color: #B3B5B7;
 }
+
+
+ul li a:hover {
+	text-decoration: none;
+	color:#FFF;
+} 
