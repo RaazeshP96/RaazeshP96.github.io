@@ -16,7 +16,7 @@
     <!-- bootstrap  cdn implementation -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- internal css -->
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
     </div>
     <div class="container-fluid" id="mainContent" hidden>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
             <a class="navbar-brand" href="#mainContent">
                 <img src="img/favicon-32x32.png" width="32" height="32" alt="raazeshprajapati_icon" title="RaazeshP96" loading="lazy">
             </a>
@@ -44,66 +44,42 @@
                         <a class="nav-link" href="#myrepo">My Reposotories</a>
                     </li>
                 </ul>
-        </nav>
-        <main class="jumbotron">
-            <img id="profile" alt="github_pic" height="200" width="200" title="github_photo" class="img-thumbnail mx-auto d-block">
-            <h1 id="username" class="display-4 text-center"></h1>
-            <h3 id="bio" class="lead text-center"></h3>
-            <h3 id="follow" class="text-center"></h3>
-            <p class="lead text-center">
-                Click me on <a class="btn btn-dark" target="_blank" id="gitHub">Github</a>
-            </p>
-            <hr>
-            <!-- twitter api from publish.twitter.com -->
-            <div class="blocktext" align="center" id="twitter">
-                <a class="twitter-timeline" data-width="600" data-height="500" data-theme="dark" href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw">Tweets by raazesh_p</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
-            <hr>
-            <!-- displaying reposotories -->
-            <div>
-                <p id="myrepo" class="display-5"><strong> My Reposotories: </strong></p>
-                <hr>
-                <ul id="repo" class="list-group list-group-flush"></ul>
+        </nav>
+        <main>
+            <div class="contain1">
+                <figure>
+                    <img id="profile" alt="github_pic" height="200" width="200" title="github_photo" class="img-thumbnail mx-auto d-block">
+                </figure>
+                <h1 id="username" class="display-4 text-center"></h1>
+                <h3 id="bio" class="lead text-center"></h3>
+                <h3 id="follow" class="text-center"></h3>
+                <p class="lead text-center">
+                    Click me on <a class="btn btn-dark" target="_blank" id="gitHub">Github</a>
+                </p>
+            </div>
+            <div class="contain2">
+                <!-- twitter api from publish.twitter.com -->
+                <div class="blocktext" align="center" id="twitter">
+                    <p><strong> My Tweets: </strong></p><hr>
+                    <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw">Tweets by raazesh_p</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <!-- displaying reposotories -->
+                <div class="reposotories">
+                    <p id="myrepo" class="display-5" align="center"><strong> My Reposotories: </strong></p>
+                    <hr>
+                    <ul id="repo" class="list-group list-group-flush"></ul>
+                </div>
             </div>
         </main>
-        <footer class="footer-copyright text-center py-3">© 2020 Copyright:
+
+    
+        <footer class="footer-copyright text-center py-3">
             <a href="https://Raazeshp96.github.io/" style="color:#52A5E3" target="_blank"> Raazeshp96.github.io</a>
         </footer>
     </div>
-    <script>
-    // fetching api of RaazeshP96's github
-    fetch('https://api.github.com/users/RaazeshP96')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            document.getElementById('profile').src = data['avatar_url']
-            document.getElementById('username').innerHTML = `<strong> ${data['name']} </strong> `
-            let follower = data['followers']
-            let message = `${follower} nice people are following me in github.`
-            document.getElementById('bio').textContent = data['bio']
-            document.getElementById('gitHub').href = data['html_url']
-            document.getElementById('follow').textContent = message
-        });
-
-    // getting the api of Reposotories from github
-    fetch("https://api.github.com/users/RaazeshP96/repos")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            let ref = document.getElementById('repo')
-            data.forEach(element => {
-                ref.innerHTML += `<li class="list-group-item"><a href='${element["html_url"]}' target='_blank' > ${element['name']} </a></li>`
-
-
-            })
-
-
-            // for displaying loading before fetching datas from apis
-            document.getElementById('mainContent').hidden = false
-            document.getElementById('hideme').hidden = true
-        });
-    </script>
+    <script src="script/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

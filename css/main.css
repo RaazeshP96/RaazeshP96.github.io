@@ -75,11 +75,20 @@ ul  a:hover, ul  a:focus {
 .contain2 #twitter{
 	flex:3;
 }
+#twitter p{
+	color: #2A9D9C;
+	font-size: 2rem;
+}
 .reposotories{
 	flex:4;
 	margin-right: 2%;
 	margin-left: 2%;
 
+}
+.reposotories p{
+	color: #8E4225;
+	
+	font-size: 2rem;
 }
 footer{
 	color: #FFF;
