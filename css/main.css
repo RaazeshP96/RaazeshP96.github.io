@@ -23,10 +23,10 @@ a {
 }
 body {
   background-image: url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-  color: #ffffff;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  color: #fff;
 }
 .contain1 {
   margin-bottom: 21vh;
@@ -88,6 +88,16 @@ ul a:focus {
 
   font-size: 2rem;
 }
+.pagination a {
+  text-decoration: none;
+  background-color: #343a40;
+  color: #b3b5b7;
+}
+
+.pagination a:hover {
+  text-decoration: none;
+  color: #8e4225;
+}
 footer {
   color: #fff;
   background-color: #343a40;
@@ -99,17 +109,6 @@ footer a {
 footer::before {
   content: "© 2020 Copyright:";
   font-family: "Sriracha", cursive;
-}
-
-.pagination a {
-  text-decoration: none;
-  background-color: #343a40;
-  color: #b3b5b7;
-}
-
-.pagination a:hover {
-  text-decoration: none;
-  color: #8e4225;
 }
 
 /*====================
@@ -124,10 +123,13 @@ footer::before {
   }
 
   h3 {
-    font-size: 0.75rem;
+    font-size: 1.5rem;
   }
 
   .display-5 {
     font-size: 1.05rem;
+  }
+  .contain2 {
+    display: block;
   }
 }
