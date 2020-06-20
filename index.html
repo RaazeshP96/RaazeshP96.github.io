@@ -1,88 +1,168 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="raazeshprajapati,Portfolio,RaazeshP96">
-    <meta name="description" content="This is a simple portfolio website using github apis">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="keywords" content="raazeshprajapati,Portfolio,RaazeshP96" />
+    <meta
+      name="description"
+      content="This is a simple portfolio website using github apis"
+    />
     <title>Rajesh's Portfolio</title>
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
     <!-- bootstrap  cdn implementation -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <!-- internal css -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
 
-<body>
+  <body>
     <div id="hideme">
-        <strong>Loading...</strong>
+      <strong>Loading...</strong>
     </div>
     <div class="container-fluid" id="mainContent" hidden>
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="#mainContent">
-                <img src="img/favicon-32x32.png" width="32" height="32" alt="raazeshprajapati_icon" title="RaazeshP96" loading="lazy">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#mainContent">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#twitter">My Tweets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#myrepo">My Reposotories</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <div class="contain1">
-                <figure>
-                    <img id="profile" alt="github_pic" height="200" width="200" title="github_photo" class="img-thumbnail mx-auto d-block">
-                </figure>
-                <h1 id="username" class="display-4 text-center"></h1>
-                <h3 id="bio" class="lead text-center"></h3>
-                <h3 id="follow" class="text-center"></h3>
-                <p class="lead text-center">
-                    Click me on <a class="btn btn-dark" target="_blank" id="gitHub">Github</a>
-                </p>
-            </div>
-            <div class="contain2">
-                <!-- twitter api from publish.twitter.com -->
-                <div class="blocktext" align="center" id="twitter">
-                    <p><strong> My Tweets: </strong></p><hr>
-                    <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw">Tweets by raazesh_p</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <!-- displaying reposotories -->
-                <div class="reposotories">
-                    <p id="myrepo" class="display-5" align="center"><strong> My Reposotories: </strong></p>
-                    <hr>
-                    <ul id="repo" class="list-group list-group-flush"></ul>
-                </div>
-            </div>
-        </main>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#mainContent">
+          <img
+            src="img/favicon-32x32.png"
+            width="32"
+            height="32"
+            alt="raazeshprajapati_icon"
+            title="RaazeshP96"
+            loading="lazy"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#mainContent"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#twitter">My Tweets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#myrepo">My Reposotories</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div class="contain1">
+          <figure>
+            <img
+              id="profile"
+              alt="github_pic"
+              height="200"
+              width="200"
+              title="github_photo"
+              class="img-thumbnail mx-auto d-block"
+            />
+          </figure>
+          <h1 id="username" class="display-4 text-center"></h1>
+          <h3 id="bio" class="lead text-center"></h3>
+          <h3 id="follow" class="text-center"></h3>
+          <p class="lead text-center">
+            Click me on
+            <a class="btn btn-dark" target="_blank" id="gitHub">Github</a>
+          </p>
+        </div>
+        <div class="contain2">
+          <!-- twitter api from publish.twitter.com -->
+          <div class="blocktext" align="center" id="twitter">
+            <p><strong> My Tweets: </strong></p>
+            <hr />
+            <a
+              class="twitter-timeline"
+              data-width="400"
+              data-height="500"
+              data-theme="dark"
+              href="https://twitter.com/raazesh_p?ref_src=twsrc%5Etfw"
+              >Tweets by raazesh_p</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+          <!-- displaying reposotories -->
+          <div class="reposotories">
+            <p id="myrepo" class="display-5" align="center">
+              <strong> My Reposotories: </strong>
+            </p>
+            <hr />
+            <ul id="repo" class="list-group list-group-flush"></ul>
+            <div class="pagination"><ul></ul></div>
+          </div>
+        </div>
+      </main>
 
-    
-        <footer class="footer-copyright text-center py-3">
-            <a href="https://Raazeshp96.github.io/" style="color:#52A5E3" target="_blank"> Raazeshp96.github.io</a>
-        </footer>
+      <footer class="footer-copyright text-center py-3">
+        <a
+          href="https://Raazeshp96.github.io/"
+          style="color: #52a5e3;"
+          target="_blank"
+        >
+          Raazeshp96.github.io</a
+        >
+      </footer>
     </div>
     <script src="script/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

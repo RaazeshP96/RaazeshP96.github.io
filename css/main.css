@@ -1,139 +1,133 @@
-
 /*=================
 	typography
 =================*/
-@import url('https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap");
 h1,
 h3 {
-    font-family: 'Piedra', cursive;
+  font-family: "Piedra", cursive;
 }
-p{
-	font-family: 'Sriracha', cursive;
+p {
+  font-family: "Sriracha", cursive;
 }
-a{
-	font-family: 'Sriracha', cursive;
+a {
+  font-family: "Sriracha", cursive;
 }
 
 /*====================
 	global
 ====================*/
 
-*{
-	margin: 0;
-	padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-	background-image:url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-	color: #ffffff;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
+body {
+  background-image: url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
-.contain1{
-	margin-bottom: 21vh;
+.contain1 {
+  margin-bottom: 21vh;
 }
-figure{
-	margin-top:20vh;
+figure {
+  margin-top: 20vh;
 }
-.contain1 h1{
-	color: #2A9D9C;
+.contain1 h1 {
+  color: #2a9d9c;
 }
-#follow{
-	margin: 5vh auto;
-	color: #8E4225;
+#follow {
+  margin: 5vh auto;
+  color: #8e4225;
 }
 .list-group-item {
-    position: relative;
-    display: block;
-    padding: .75rem 1.25rem;
-    background-color: #343A40;
-    color: #B3B5B7;
-    border: 1px solid
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: #343a40;
+  color: #b3b5b7;
+  border: 1px solid;
 }
-.container-fluid{
-	padding-right: 0px;
-    padding-left: 0px;
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
 }
-ul  a{
-	text-decoration: none;
-	color: #B3B5B7;
-}
-
-
-ul  a:hover, ul  a:focus {
-	text-decoration: none;
-	color:#2A9D9C;
-} 
-
-.contain2{
-	display: flex;
-	flex-flow:wrap row;
-	margin: 10vh auto;
-	justify-content: space-around;
+ul a {
+  text-decoration: none;
+  color: #b3b5b7;
 }
 
-.contain2 #twitter{
-	flex:3;
-}
-#twitter p{
-	color: #2A9D9C;
-	font-size: 2rem;
-}
-.reposotories{
-	flex:4;
-	margin-right: 2%;
-	margin-left: 2%;
-
-}
-.reposotories p{
-	color: #8E4225;
-	
-	font-size: 2rem;
-}
-footer{
-	color: #FFF;
-	background-color: #343A40;
-}
-footer a{
-	color: #8E4225;
-	text-decoration: none;
-}
-footer::before{
-	content: '© 2020 Copyright:';
-	font-family: 'Sriracha', cursive;
-
+ul a:hover,
+ul a:focus {
+  text-decoration: none;
+  color: #2a9d9c;
 }
 
+.contain2 {
+  display: flex;
+  flex-flow: wrap row;
+  margin: 10vh auto;
+  justify-content: space-around;
+}
 
+.contain2 #twitter {
+  flex: 3;
+}
+#twitter p {
+  color: #2a9d9c;
+  font-size: 2rem;
+}
+.reposotories {
+  flex: 4;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.reposotories p {
+  color: #8e4225;
 
+  font-size: 2rem;
+}
+footer {
+  color: #fff;
+  background-color: #343a40;
+}
+footer a {
+  color: #8e4225;
+  text-decoration: none;
+}
+footer::before {
+  content: "© 2020 Copyright:";
+  font-family: "Sriracha", cursive;
+}
 
+.pagination a {
+  text-decoration: none;
+  background-color: #343a40;
+  color: #b3b5b7;
+}
 
-
-
-
-
-
-
-
-
-
+.pagination a:hover {
+  text-decoration: none;
+  color: #8e4225;
+}
 
 /*====================
 	media querie
 ====================*/
 
 /*Extra small devices (portrait phones, less than 576px)*/
-@media only screen and (max-width: 575.98px){ 
-	.display-4 {
-	    font-size: 1.5rem;
-	    line-height: 1.2;
-	}
+@media only screen and (max-width: 575.98px) {
+  .display-4 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
 
-	h3 {
-    	font-size: 0.75rem;
-	}
+  h3 {
+    font-size: 0.75rem;
+  }
 
-	.display-5{
-		font-size: 1.05rem;
-	}
+  .display-5 {
+    font-size: 1.05rem;
+  }
 }
