@@ -590,27 +590,27 @@
 		</div>
 		<div class="choose animate-box">
 			<h2 id='contact'>Contact</h2>
-			<form action='http://formspree.io/raazeshp96@gmail.com'>
+			<form action='http://formspree.io/raazeshp96@gmail.com'  enctype="multipart/form-data" method="POST">
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" id="fname" class="form-control" required placeholder="Your firstname">
+						<input type="text" name='fname' id="fname" class="form-control" required placeholder="Your firstname">
 					</div>
 				</div>
 				<div class="row form-group">
 					<div class="col-md-6">
-						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+						<input type="text" name='lname' id="lname" class="form-control" placeholder="Your lastname">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="email" id="email" name="_replyto" required class="form-control" placeholder="Your email address">
+						<input type="email" id="email" name="from" required class="form-control" placeholder="Your email address">
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" required placeholder="Your subject of this message">
+						<input type="text" id="subject" name='subject' class="form-control" required placeholder="Your subject of this message">
 					</div>
 				</div>
 
